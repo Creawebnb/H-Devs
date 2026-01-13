@@ -1,4 +1,4 @@
-/* Reset & Base Styles */
+
 * {
     margin: 0;
     padding: 0;
@@ -44,7 +44,7 @@ body {
     padding: 0 32px;
 }
 
-/* Navigation */
+
 .navbar {
     position: fixed;
     top: 0;
@@ -139,7 +139,7 @@ body {
     transition: all 0.3s ease;
 }
 
-/* Hero Section */
+
 .hero {
     min-height: 100vh;
     display: flex;
@@ -403,7 +403,7 @@ body {
     66% { transform: translate(-20px, 20px) scale(0.9); }
 }
 
-/* Section Styles */
+
 section {
     padding: 8rem 0;
     position: relative;
@@ -447,7 +447,7 @@ section {
     font-weight: 400;
 }
 
-/* Services Section */
+
 .services {
     background: var(--bg-darker);
 }
@@ -712,7 +712,7 @@ section {
     transform: translateX(5px);
 }
 
-/* Projects Section */
+
 .projects {
     background: var(--bg-dark);
 }
@@ -825,7 +825,6 @@ section {
     gap: 1.25rem;
 }
 
-/* About Section */
 .about {
     background: var(--bg-darker);
 }
@@ -945,7 +944,7 @@ section {
     letter-spacing: 1.5px;
 }
 
-/* Technologies Section */
+
 .technologies {
     background: var(--bg-dark);
 }
@@ -996,7 +995,7 @@ section {
     transform: scaleX(1);
 }
 
-/* Pricing Section */
+
 .pricing {
     background: var(--bg-dark);
 }
@@ -1233,7 +1232,7 @@ section {
     box-shadow: 0 12px 40px rgba(255, 0, 128, 0.4);
 }
 
-/* Maintenance Section */
+
 .maintenance-section {
     margin-top: 6rem;
     padding-top: 4rem;
@@ -1324,7 +1323,7 @@ section {
     line-height: 1.6;
 }
 
-/* Custom Project Section */
+
 .custom-project {
     margin-top: 5rem;
     padding: 4rem;
@@ -1372,7 +1371,7 @@ section {
     box-shadow: 0 12px 40px rgba(0, 212, 255, 0.4);
 }
 
-/* Contact Section */
+
 .contact {
     background: var(--bg-darker);
 }
@@ -1488,7 +1487,7 @@ section {
     color: var(--accent-1);
 }
 
-/* Footer */
+
 .footer {
     background: var(--bg-darker);
     border-top: 1px solid var(--border-color);
@@ -1507,7 +1506,7 @@ section {
     flex-direction: column;
 }
 
-/* Company Info Column */
+
 .company-info {
     max-width: 400px;
 }
@@ -1561,7 +1560,7 @@ section {
     flex-shrink: 0;
 }
 
-/* Footer Titles */
+
 .footer-title {
     font-size: 1rem;
     font-weight: 700;
@@ -1575,7 +1574,7 @@ section {
     margin-top: 2.5rem;
 }
 
-/* Footer Links */
+
 .footer-links {
     list-style: none;
     display: flex;
@@ -1603,7 +1602,7 @@ section {
     margin-right: 0.25rem;
 }
 
-/* Technologies Grid */
+
 .footer-techs {
     display: flex;
     flex-wrap: wrap;
@@ -1628,7 +1627,7 @@ section {
     color: #00d4ff;
 }
 
-/* Partners Section */
+
 .footer-partner {
     background: var(--bg-card);
     border: 1px solid var(--border-color);
@@ -1673,7 +1672,7 @@ section {
     transform: translate(3px, -3px);
 }
 
-/* Footer Bottom */
+
 .footer-bottom {
     border-top: 1px solid var(--border-color);
     padding-top: 2rem;
@@ -1746,7 +1745,7 @@ section {
     transform: translateY(-2px);
 }
 
-/* Responsive Design */
+
 @media (max-width: 1200px) {
     .hero .container {
         gap: 4rem;
@@ -1929,3 +1928,4 @@ section {
     from { opacity: 0; }
     to { opacity: 1; }
 }
+
