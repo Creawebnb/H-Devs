@@ -1,4 +1,4 @@
-// Navigation Toggle
+
 const navToggle = document.getElementById('navToggle');
 const navMenu = document.getElementById('navMenu');
 
@@ -8,7 +8,7 @@ if (navToggle && navMenu) {
         navToggle.classList.toggle('active');
     });
 
-    // Close menu when clicking on a link
+  
     const navLinks = document.querySelectorAll('.nav-link');
     navLinks.forEach(link => {
         link.addEventListener('click', () => {
@@ -17,7 +17,7 @@ if (navToggle && navMenu) {
         });
     });
 
-    // Close menu when clicking outside
+   
     document.addEventListener('click', (e) => {
         if (!navMenu.contains(e.target) && !navToggle.contains(e.target)) {
             navMenu.classList.remove('active');
@@ -26,7 +26,7 @@ if (navToggle && navMenu) {
     });
 }
 
-// Navbar Scroll Effect
+
 const navbar = document.querySelector('.navbar');
 let lastScroll = 0;
 
@@ -42,7 +42,7 @@ window.addEventListener('scroll', () => {
     lastScroll = currentScroll;
 });
 
-// Smooth Scroll for Anchor Links
+
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         const href = this.getAttribute('href');
@@ -60,7 +60,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Active Navigation Link on Scroll
+
 const sections = document.querySelectorAll('section[id]');
 
 function activateNavLink() {
@@ -84,9 +84,9 @@ function activateNavLink() {
 }
 
 window.addEventListener('scroll', activateNavLink);
-activateNavLink(); // Initial check
+activateNavLink(); /
 
-// Intersection Observer for Fade-in Animations
+
 const observerOptions = {
     threshold: 0.1,
     rootMargin: '0px 0px -150px 0px'
@@ -104,7 +104,7 @@ const observer = new IntersectionObserver((entries) => {
     });
 }, observerOptions);
 
-// Observe elements for animation
+
 document.querySelectorAll('.service-card, .project-card, .tech-item, .about-feature, .pricing-card, .maintenance-card').forEach(el => {
     el.style.opacity = '0';
     el.style.transform = 'translateY(50px)';
@@ -112,14 +112,14 @@ document.querySelectorAll('.service-card, .project-card, .tech-item, .about-feat
     observer.observe(el);
 });
 
-// Contact Form Handler
+
 const contactForm = document.getElementById('contactForm');
 
 if (contactForm) {
     contactForm.addEventListener('submit', (e) => {
         e.preventDefault();
 
-        // Get form values
+     
         const formData = {
             name: document.getElementById('name').value,
             email: document.getElementById('email').value,
@@ -127,10 +127,10 @@ if (contactForm) {
             message: document.getElementById('message').value
         };
 
-        // Here you would typically send the data to a server
+       
         console.log('Form submitted:', formData);
         
-        // Show success message
+      
         const submitBtn = contactForm.querySelector('button[type="submit"]');
         const originalText = submitBtn.textContent;
         submitBtn.textContent = 'Message envoyé ✓';
@@ -145,7 +145,7 @@ if (contactForm) {
     });
 }
 
-// Counter Animation for Stats
+
 function animateCounter(element, target, duration = 2500) {
     let start = 0;
     const increment = target / (duration / 16);
@@ -162,7 +162,7 @@ function animateCounter(element, target, duration = 2500) {
     }, 16);
 }
 
-// Animate stats when they come into view
+
 const statsObserver = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
@@ -176,7 +176,7 @@ const statsObserver = new IntersectionObserver((entries) => {
                 }
             });
             
-            // Animate hero stats
+        
             const heroStats = document.querySelectorAll('.hero-stat-number');
             heroStats.forEach(stat => {
                 const text = stat.textContent;
@@ -202,7 +202,7 @@ if (heroSection) {
     statsObserver.observe(heroSection);
 }
 
-// Parallax Effect for Hero Section (subtle)
+
 window.addEventListener('scroll', () => {
     const scrolled = window.pageYOffset;
     const hero = document.querySelector('.hero');
@@ -220,7 +220,7 @@ window.addEventListener('scroll', () => {
     }
 });
 
-// Add glow effect on hover for buttons
+
 document.querySelectorAll('.btn-primary').forEach(btn => {
     btn.addEventListener('mouseenter', function() {
         this.style.boxShadow = '0 12px 50px rgba(0, 255, 136, 0.5)';
@@ -231,7 +231,7 @@ document.querySelectorAll('.btn-primary').forEach(btn => {
     });
 });
 
-// Add active class to nav links with CSS
+
 const style = document.createElement('style');
 style.textContent = `
     .nav-link.active {
@@ -253,7 +253,7 @@ style.textContent = `
 `;
 document.head.appendChild(style);
 
-// Cursor glow effect (optional enhancement)
+
 let cursor = document.createElement('div');
 cursor.className = 'custom-cursor';
 cursor.style.cssText = `
@@ -285,7 +285,7 @@ document.addEventListener('mouseleave', () => {
     cursor.style.opacity = '0';
 });
 
-// Add scale effect on interactive elements
+
 document.querySelectorAll('a, button, .service-card, .project-card, .tech-item, .pricing-card, .pricing-btn, .custom-project-btn').forEach(el => {
     el.addEventListener('mouseenter', function() {
         cursor.style.transform = 'scale(1.8)';
@@ -298,7 +298,7 @@ document.querySelectorAll('a, button, .service-card, .project-card, .tech-item, 
     });
 });
 
-// Loading Animation
+
 window.addEventListener('load', () => {
     document.body.style.opacity = '0';
     setTimeout(() => {
@@ -307,7 +307,7 @@ window.addEventListener('load', () => {
     }, 100);
 });
 
-// Scroll reveal animations for section headers
+
 const scrollReveal = new IntersectionObserver((entries) => {
     entries.forEach((entry, index) => {
         if (entry.isIntersecting) {
@@ -329,7 +329,7 @@ document.querySelectorAll('.section-header, .section-title, .section-description
     scrollReveal.observe(el);
 });
 
-// Hero blob animations
+
 document.querySelectorAll('.hero-blob').forEach((blob, index) => {
     blob.addEventListener('mouseenter', function() {
         this.style.transform = 'scale(1.3)';
@@ -342,7 +342,7 @@ document.querySelectorAll('.hero-blob').forEach((blob, index) => {
     });
 });
 
-// Service cards icon animation enhancement
+
 document.querySelectorAll('.service-card').forEach(card => {
     card.addEventListener('mouseenter', function() {
         const icon = this.querySelector('.service-icon');
@@ -359,7 +359,7 @@ document.querySelectorAll('.service-card').forEach(card => {
     });
 });
 
-// Smooth reveal for about features
+
 const aboutFeaturesObserver = new IntersectionObserver((entries) => {
     entries.forEach((entry, index) => {
         if (entry.isIntersecting) {
@@ -378,7 +378,7 @@ document.querySelectorAll('.about-feature').forEach(feature => {
     aboutFeaturesObserver.observe(feature);
 });
 
-// Project card image hover effect
+
 document.querySelectorAll('.project-card').forEach(card => {
     const image = card.querySelector('.project-image');
     const overlay = card.querySelector('.project-overlay');
@@ -396,7 +396,7 @@ document.querySelectorAll('.project-card').forEach(card => {
     });
 });
 
-// Pricing card featured animation
+
 document.querySelectorAll('.pricing-card.featured').forEach(card => {
     card.addEventListener('mouseenter', function() {
         this.style.transform = 'translateY(-15px) scale(1.02)';
@@ -407,7 +407,7 @@ document.querySelectorAll('.pricing-card.featured').forEach(card => {
     });
 });
 
-// Pricing buttons hover effect
+
 document.querySelectorAll('.pricing-btn, .custom-project-btn').forEach(btn => {
     btn.addEventListener('mouseenter', function() {
         this.style.transform = 'translateY(-3px)';
@@ -417,3 +417,4 @@ document.querySelectorAll('.pricing-btn, .custom-project-btn').forEach(btn => {
         this.style.transform = 'translateY(0)';
     });
 });
+
